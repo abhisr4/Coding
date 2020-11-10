@@ -25,6 +25,12 @@ template<typename T> void P(T n){
 	while(i>=0)putchar(sname[i--]);
 	putchar('\n');
 }
+template<typename T> void I(vector<T>& X){
+	for(ll i=0;i<X.size();i++)I(X[i]);
+}
+template<typename T> void P(vector<T> X){
+	for(ll i=0;i<X.size();i++)P(X[i]);
+}
 
 string lower(string X){string a="";for(int i=0;i<X.size();i++)a+=tolower(X[i]); return a;}
 string uppper(string X){string a="";for(int i=0;i<X.size();i++)a+=toupper(X[i]);return a;}
