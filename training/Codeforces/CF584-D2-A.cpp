@@ -22,20 +22,18 @@ inline ll StringToInt(string s){ll a=0;int i=s.size()-1;while(i>=0){a=a*10+(s[i]
 inline string lowercase(string s){int n=s.size();for(int i=0;i<n;i++){if(s[i]>='A' && s[i]<='Z')s[i]=s[i]-'A'+'a';}return s;}
 inline string uppercase(string s){int n=s.size();for(int i=0;i<n;i++){if(s[i]>='a' && s[i]<='z')s[i]+='A'-'a';}return s;}
 
-int count(ll n){
-	int count=0;
-	while(n>0){count++;n/=10;}
-	return count;
-}
 void solve(){
-	int n,t;
+	ll n,t;
 	I(n);I(t);
-	ll num=t;
-	while(count(num)<n){
-		num+=t;
+	if(n==1 && t<=9){cout<<t;return;}
+	else if(n==1 && t==10){cout<<"-1";return;}
+	string ans="";
+	if(t<=9){
+		for(int i=1;i<=n;i++){cout<<t;}
+	}else if(t==10){
+		for(int i=1;i<n;i++){cout<<"1";}
+		cout<<"0";
 	}
-	if(count(num)==n)P(num);
-	else P(-1);
 }
 int main()
 {
