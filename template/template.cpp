@@ -24,6 +24,7 @@ template<typename T> void P(T n){
 	if(neg)putchar('-');
 	while(i>=0)putchar(sname[i--]);
 	putchar('\n');
+}
 
 string lower(string X){string a="";for(int i=0;i<X.size();i++)a+=tolower(X[i]); return a;}
 string uppper(string X){string a="";for(int i=0;i<X.size();i++)a+=toupper(X[i]);return a;}
