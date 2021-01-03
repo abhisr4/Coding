@@ -1,6 +1,6 @@
 My coding repository-> here I have the templates for c++ coding
 python srcipt for compile and run c++ code.
-
+command-> chmod +x <name of the file>.py   creating an excutable file
 instruction to setup git mysql etc in linux.
 
 Problems maybe uploaded later but who knows.
