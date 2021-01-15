@@ -24,7 +24,7 @@ def createDirectory(data):
         print(Fore.RED + "Folder Exists " + data['name'])
         print(Style.RESET_ALL)
     except:
-        print(Fore.RED + "An error occured while creating the directory" + data['name'])
+    ()    print(Fore.RED + "An error occured while creating the directory" + data['name'])
         print(Style.RESET_ALL)
 
     problem_file = problem_dir + '/' + data['name'] + '.cpp'
