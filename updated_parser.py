@@ -1,6 +1,6 @@
 import tornado.ioloop, tornado.web, json, os, sys
 from colorama import *
-
+minimal_template='#include<bits/stdc++.h> \nusing namespace std;\nvoid solve(){\n\t\n}\nint main()\n{\n\tint test=1;\n\tscanf("%d",&test);\n\tfor(int i=1;i<=test;i++){\n\tsolve();\n\t}\n}'
 parsed_problems=[] #contains the parsed problem data
 parsed_count=0 #taking input rom console
 
@@ -24,7 +24,6 @@ def createDirectory(data):
     problem_dir=current_dir+'/'+data['name']
     try:
         os.mkdir(problem_dir)
-
     except FileExistsError:
         print("Folder Already Exists"+data['name'])
         return
@@ -36,9 +35,14 @@ def createDirectory(data):
     #create problem file with a template
     problem_file=problem_dir+'/'+data['name']+'.cpp'
     with open(problem_file,'w') as f:
-        with open('template.txt','r+') as temp_file:
-            f.write(temp_file.read())
-            temp_file.close()
+        try:
+            with open('template.txt','r+') as temp_file:
+                f.write(temp_file.read())
+                temp_file.close()
+        except FileNotFoundError:
+            print("Template file doesnot exists")
+            print("A blanck file has been created")
+            f.write(minimal_template)
         f.close()
     #creating input output file
     file_input_base=problem_dir+'/input'
