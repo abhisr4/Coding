@@ -36,7 +36,7 @@ def createDirectory(data):
     problem_file=problem_dir+'/'+data['name']+'.cpp'
     with open(problem_file,'w') as f:
         try:
-            with open('template.txt','r+') as temp_file:
+            with open('template.cpp','r+') as temp_file:
                 f.write(temp_file.read())
                 temp_file.close()
         except FileNotFoundError:
