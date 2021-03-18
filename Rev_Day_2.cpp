@@ -145,4 +145,6 @@ char *mystrtok(char *str,char delim){
     return output;
 }
 
-//
+// https://onlinejudge.org/index.php?option=onlinejudge&Itemid=99999999&page=show_problem&category=0&problem=1620&mosmsg=Submission+received+with+ID+26198511
+// longest common substring(not subsequence)
+// 
