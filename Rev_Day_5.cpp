@@ -282,3 +282,9 @@ void findingSubsetOfString(char a[i]){
 }
 
 // important-> inclusion & exclusion principle using bit masks
+
+// similar problems
+// https://codeforces.com/problemset/problem/579/A
+// https://codeforces.com/problemset/problem/535/B
+// https://codeforces.com/problemset/problem/743/B
+// https://codeforces.com/problemset/problem/96/B
