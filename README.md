@@ -32,8 +32,8 @@
   open ***sublime > Tools > Build System > New Build System***
   paste the following
   ~~~shell script
-  {
-"cmd": ["g++", "-std=c++14", "$file", "-o", "${file_path}/${file_base_name}"],
+{
+"cmd": ["g++", "-std=c++14", "$file", "-o", "${file_path}/a"],
 "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
 "working_dir": "${file_path}",
 "selector": "source.c, source.c++, source.cxx, source.cpp",
@@ -41,11 +41,14 @@
 [
 {
 	"name": "Run",
-	"cmd": ["bash", "-c", "g++ -std=c++14 '${file}' -o '${file_path}/${file_base_name}' && xfce4-terminal -x bash -c '\"${file_path}/${file_base_name}\" ; read'"]
-}
+	"cmd": ["bash", "-c", "xfce4-terminal -x bash -c '\"${file_path}/a\" ; read'"]
+},
 ]
 }
   ~~~
+  upon compiling it creates a file 'a' and run the file a
+  to create different named compiled file replace "${file_path}/a" with "${file_path}/{file_name}"
+  
   save the file using ***compile***
   filename will be: **compile.sublime-built**
   & to get the location of file type in terminal
